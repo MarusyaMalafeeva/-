@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <title>Определение числа</title>
+  </head>
+  <body>
+    <!-- Универсальная навигация для всех страниц -->
+    <nav>
+      <ul>
+        <li>
+          <a href="index.html" class="active"><b>Главная</b></a>
+        </li>
+        <li><a href="задачка.html">Алгоритмическая задача</a></li>
+        <li><a href="dom_js.html">DOM JS</a></li>
+        <li><a href="change_passport.html">Изменение данных</a></li>
+        <li>
+          <a
+            href="https://electives.hse.ru/minor_programming_spb/"
+            target="_blank"
+            >Внешний сайт</a
+          >
+        </li>
+        <li><a href="table.html">Таблица</a></li>
+        <li><a href="contact.html">Контакт</a></li>
+        <li><a href="pasport.html">Паспорт</a></li>
+        <li><a href="DOM.html">DOM</a></li>
+        <li>
+          <a href="galery.html"
+            ><img height="20px" src="images/префектура миядзаки.jpg"
+          /></a>
+        </li>
+      </ul>
+    </nav>
+    <h1>Определение числа</h1>
+    <p>
+      Введите вещественное число, чтобы определить, положительное оно,
+      отрицательное или ноль:
+    </p>
+    <form id="numberForm">
+      <input
+        type="number"
+        step="any"
+        id="numberInput"
+        placeholder="Введите число"
+        required
+      />
+      <button type="submit">Определить</button>
+    </form>
+
+    <p id="result"></p>
+
+    <script>
+      document
+        .getElementById("numberForm")
+        .addEventListener("submit", function (event) {
+          event.preventDefault();
+          const number = parseFloat(
+            document.getElementById("numberInput").value
+          );
+          let resultText;
+
+          if (number > 0) {
+            resultText = "Число положительное.";
+          } else if (number < 0) {
+            resultText = "Число отрицательное.";
+          } else {
+            resultText = "Это число ноль.";
+          }
+
+          document.getElementById("result").innerText = resultText;
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>Форма для отправки контактных данных</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Главная</a></li>
+            <li><a href="задачка.html">Алгоритмическая задача</a></li>
+            <li><a href="dom_js.html">DOM JS</a></li>
+            <li><a href="change_passport.html">Изменение данных</a></li>
+            <li><a href="https://electives.hse.ru/minor_programming_spb/" target="_blank">Внешний сайт</a></li>
+            <li><a href="table.html">Таблица</a></li>
+            <li><a href="contact.html"><b>Контакт</b></a></li>
+            <li><a href="pasport.html">Паспорт</a></li>
+            <li><a href="DOM.html">DOM</a></li>
+        </ul>
+    </nav>
+    <h3 align="center">Форма для заявки на тур</h3>
+
+    <!-- Форма для заказа услуги -->
+    <form action="https://www.bing.com/search?" method="POST" target="_blank">
+        <p>Фамилия: <input type="text" name="last_name" size="20" value="Иван"></p>
+        <p>Имя: <input type="text" name="first_name" size="20" value="Иванов"></p>
+        <p>Телефон: <input type="tel" name="phone" size="15" value="+79000000000"></p>
+        <p>Куда вы хотите поехать: <input type="text" name="product_name" value="Токио"></p>
+        <p>Количество дней: <input type="number" name="quantity" value="10"></p>
+        <p>Ваши намерения
+            <table>
+                <tr>
+                    <td>Уверен в поездке</td>
+                    <td><input type="radio" name="planning" value="exactly" checked></td>
+                </tr>
+                <tr>
+                    <td>Присматриваю вариант</td>
+                    <td><input type="radio" name="planning" value="not exactly"></td>
+                </tr>
+                </table>
+        </p>
+        <p>Вы соглашаетесь с обработкой персональных данных:<input type="checkbox" name="agree"><p></p>
+
+        <p>Дата планируемой поездки: <input type="date" name="order_date" value="2024-11-28"><p>
+        <p><input type="submit" value="Отправить данные"></p>
+    </form>
+</body>
+</html>
